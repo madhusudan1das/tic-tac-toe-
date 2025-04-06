@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+}
+
+/* Navigation Bar */
+#nav1 {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  font-size:10px;
+}
+h1{
+  align-items: center;
+  margin: 0.4rem;
+  color: #00080c;
+}
+#scoreboard{
+  color: #00fe83;
+  margin: 10px;
+}
+#scoreboard1{
+  background-color: #0ce07d;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #410202;
+}
+/* Theme Toggle Button */
+#btn1 {
+  height: 40px;
+  width: 40px;
+  background-color: #fa0a0a;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Game Container */
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 90%;
+  max-width: 300px;
+  margin: 80px auto 8px auto;
+}
+
+/* Tic-Tac-Toe Buttons */
+#btn {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(63, 121, 121);
+  border: 2px solid #db310b;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: aqua;
+}
+
+#btn:hover {
+  background-color: #3d86ce;
+}
+
+/* Reset Button */
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #dc3545;
+  color: rgb(5, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background-color: #dd0000;
+}
+
+/* Footer */
+footer {
+  margin-top: 100px;
+  padding: 110px;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+footer:button{
+  background-color: none;
+}
+
+ul {
+  display: flex;
+  position: absolute;
+  top: 89%;
+  left: 30%;
+  transform: translate(-10%, -40%);
+  size: 10px;
+  padding: 10px;
+  
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  width: 50px;
+  height: 50px;
+  background-color: #f4e7e7;
+  text-align: center;
+  line-height: 10px;
+  font-size: 45px;
+  margin: 10px 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #00fe83;
+  z-index: 1;
+}
+
+ul li a .icon {
+  position: relative;
+  color: #080101;
+  transition: .5s;
+  z-index: 3;
+}
+
+ul li a:hover .icon {
+  color: #371818;
+  transform: rotateY(360deg);
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+ul li a:hover:before {
+  top: 0;
+}
+
+ul li:nth-child(1) a:before{
+  background: #3b5999;
+}
+
+ul li:nth-child(2) a:before{
+  background: #55acee;
+}
+
+ul li:nth-child(3) a:before {
+  background: #0077b5;
+}
+
+ul li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #nav1 {
+      height: 50px;
+      padding: 5px;
+  }
+
+  #btn1 {
+      height: 35px;
+      width: 35px;
+  }
+
+  #container {
+      width: 95%;
+      max-width: 250px;
+      margin: 70px auto 20px auto;
+  }
+
+  #btn {
+      height: 80px;
+  }
+
+  #reset {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  footer {
+      font-size: 12px;
+  }
+}
