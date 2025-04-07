@@ -28,7 +28,6 @@ ResetButton.addEventListener("click", function () {
   updateScore(); // updates the scoreboard text
 });
 
-
 let currentPlayer = "X";
 let board = Array(9).fill("");
 let gameActive = true;
@@ -41,9 +40,14 @@ function updateScore() {
 
 function checkWinner() {
   const winPatterns = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8],
-    [0, 3, 6], [1, 4, 7], [2, 5, 8],
-    [0, 4, 8], [2, 4, 6]
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
   ];
 
   for (let pattern of winPatterns) {
@@ -99,7 +103,7 @@ resetButton.addEventListener("click", () => {
   gameActive = true;
   currentPlayer = "X";
   message.innerHTML = "";
-  buttons.forEach(button => {
+  buttons.forEach((button) => {
     button.textContent = "";
     button.disabled = false;
   });
@@ -168,9 +172,14 @@ function minimax(newBoard, depth, isMaximizing) {
 
 function getWinner(b) {
   const winPatterns = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8],
-    [0, 3, 6], [1, 4, 7], [2, 5, 8],
-    [0, 4, 8], [2, 4, 6]
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
   ];
   for (let [a, b1, c] of winPatterns) {
     if (b[a] && b[a] === b[b1] && b[a] === b[c]) return b[a];

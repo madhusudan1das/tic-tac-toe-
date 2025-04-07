@@ -6,7 +6,6 @@ body {
   padding: 0;
   background-color: #fdfdfd;
 }
-
 /* Navigation Bar */
 #nav1 {
   height: 50px;
@@ -19,18 +18,18 @@ body {
   align-items: center;
   justify-content: flex-start;
   padding: 10px;
-  font-size:10px;
+  font-size: 10px;
 }
-h1{
+h1 {
   align-items: center;
   margin: 0.4rem;
   color: #00080c;
 }
-#scoreboard{
+#scoreboard {
   color: #00fe83;
   margin: 10px;
 }
-#scoreboard1{
+#scoreboard1 {
   background-color: #0ce07d;
   cursor: pointer;
   border-radius: 10px;
@@ -47,6 +46,9 @@ h1{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+#btn1:hover {
+  background-color: antiquewhite;
 }
 
 /* Game Container */
@@ -105,9 +107,6 @@ footer {
   font-size: 14px;
   width: 100%;
 }
-footer:button{
-  background-color: none;
-}
 
 ul {
   display: flex;
@@ -117,7 +116,6 @@ ul {
   transform: translate(-10%, -40%);
   size: 10px;
   padding: 10px;
-  
 }
 
 ul li {
@@ -143,7 +141,7 @@ ul li a {
 ul li a .icon {
   position: relative;
   color: #080101;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 3;
 }
 
@@ -160,7 +158,7 @@ ul li a:before {
   width: 100%;
   height: 100%;
   background: #f00;
-  transition: .5s;
+  transition: 0.5s;
   z-index: 2;
 }
 
@@ -168,11 +166,11 @@ ul li a:hover:before {
   top: 0;
 }
 
-ul li:nth-child(1) a:before{
+ul li:nth-child(1) a:before {
   background: #3b5999;
 }
 
-ul li:nth-child(2) a:before{
+ul li:nth-child(2) a:before {
   background: #55acee;
 }
 
@@ -187,31 +185,31 @@ ul li:nth-child(4) a:before {
 /* Responsive Design */
 @media (max-width: 600px) {
   #nav1 {
-      height: 50px;
-      padding: 5px;
+    height: 50px;
+    padding: 5px;
   }
 
   #btn1 {
-      height: 35px;
-      width: 35px;
+    height: 35px;
+    width: 35px;
   }
 
   #container {
-      width: 95%;
-      max-width: 250px;
-      margin: 70px auto 20px auto;
+    width: 95%;
+    max-width: 250px;
+    margin: 70px auto 20px auto;
   }
 
   #btn {
-      height: 80px;
+    height: 80px;
   }
 
   #reset {
-      font-size: 14px;
-      padding: 8px 16px;
+    font-size: 14px;
+    padding: 8px 16px;
   }
 
   footer {
-      font-size: 12px;
+    font-size: 12px;
   }
 }
